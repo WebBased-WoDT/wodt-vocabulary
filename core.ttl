@@ -131,6 +131,14 @@ foaf:surname rdf:type owl:AnnotationProperty .
                  rdfs:label "Physical asset identifier"@en .
 
 
+###  https://purl.org/wodt/propertyTolerance
+:propertyTolerance rdf:type owl:DatatypeProperty ;
+                   rdfs:range xsd:double ;
+                   rdfs:comment "This property represents the tolerance of the described property. The unit of measurement is the same of the associated property."@en ;
+                   rdfs:isDefinedBy "https://purl.org/wodt/" ;
+                   rdfs:label "Property tolerance"@en .
+
+
 ###  https://purl.org/wodt/version
 :version rdf:type owl:DatatypeProperty ;
          rdfs:domain :WoDTDigitalTwin ;
