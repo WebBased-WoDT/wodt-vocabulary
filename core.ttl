@@ -66,12 +66,26 @@ foaf:surname rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
+###  https://purl.org/wodt/currentStatus
+:currentStatus rdf:type owl:ObjectProperty ;
+               rdfs:comment "This property links the Digital Twin Descriptor to its Digital Twin Knowledge Graph."@en ;
+               rdfs:isDefinedBy "https://purl.org/wodt/" ;
+               rdfs:label "Current status"@en .
+
+
 ###  https://purl.org/wodt/domainPredicate
 :domainPredicate rdf:type owl:ObjectProperty ;
                  rdfs:range rdf:Property ;
                  rdfs:comment "This property allows to associate an element of the meta-model of the Digital Twin Descriptor to the domain."@en ;
                  rdfs:isDefinedBy "https://purl.org/wodt/" ;
                  rdfs:label "Domain predicate"@en .
+
+
+###  https://purl.org/wodt/hasDescriptor
+:hasDescriptor rdf:type owl:ObjectProperty ;
+               rdfs:comment "This property allows to link to the associated Digital Twin Descriptor"@en ;
+               rdfs:isDefinedBy "https://purl.org/wodt/" ;
+               rdfs:label "Has Digital Twin Descriptor"@en .
 
 
 ###  https://purl.org/wodt/hasDigitalTwin
