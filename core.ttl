@@ -66,9 +66,27 @@ foaf:surname rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
+###  https://purl.org/wodt/hasDigitalTwin
+:hasDigitalTwin rdf:type owl:ObjectProperty ;
+                owl:inverseOf :registeredToPlatform ;
+                rdfs:comment "This property links a WoDT Digital Twins Platform to its registered WoDT Digital Twins."@en ;
+                rdfs:isDefinedBy "https://purl.org/wodt/" ;
+                rdfs:label "Has registered WoDT Digital Twin"@en .
+
+
+###  https://purl.org/wodt/registeredToPlatform
+:registeredToPlatform rdf:type owl:ObjectProperty ;
+                      rdfs:domain :WoDTDigitalTwin ;
+                      rdfs:range :WoDTDigitalTwinsPlatform ;
+                      rdfs:comment "This property link the WoDT Digital Twin to the WoDT Digital Twins Platform to which it is registered."@en ;
+                      rdfs:isDefinedBy "https://purl.org/wodt/" ;
+                      rdfs:label "Registered to WoDT Digital Twins Platform"@en .
+
+
 ###  https://purl.org/wodt/shadowingLatency
 :shadowingLatency rdf:type owl:ObjectProperty ,
                            owl:FunctionalProperty ;
+                  rdfs:domain :WoDTDigitalTwin ;
                   rdfs:range time:Duration ;
                   rdfs:comment "This property represents the shadowing latency of the Digital Twin"@en ;
                   rdfs:isDefinedBy "https://purl.org/wodt/" ;
@@ -81,6 +99,7 @@ foaf:surname rdf:type owl:AnnotationProperty .
 
 ###  https://purl.org/wodt/deploymentCountry
 :deploymentCountry rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :WoDTDigitalTwin ;
                    rdfs:range xsd:string ;
                    rdfs:comment "The deployment country of the Digital Twin. The country is expressed following the ISO 3166-1 alpha-2 or alpha-3 country codes."@en ;
                    rdfs:isDefinedBy "https://purl.org/wodt/" ;
@@ -89,6 +108,7 @@ foaf:surname rdf:type owl:AnnotationProperty .
 
 ###  https://purl.org/wodt/physicalAssetId
 :physicalAssetId rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :WoDTDigitalTwin ;
                  rdfs:range xsd:string ;
                  rdfs:comment "This property indicates the Physical Asset identifier that is associated with the represented Digital Twin" ;
                  rdfs:isDefinedBy "https://purl.org/wodt/" ;
@@ -97,6 +117,7 @@ foaf:surname rdf:type owl:AnnotationProperty .
 
 ###  https://purl.org/wodt/version
 :version rdf:type owl:DatatypeProperty ;
+         rdfs:domain :WoDTDigitalTwin ;
          rdfs:range xsd:string ;
          rdfs:comment "This property describes the version of the Digital Twin Descriptor"@en ;
          rdfs:isDefinedBy "https://purl.org/wodt/" ;
