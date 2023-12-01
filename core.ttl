@@ -63,6 +63,19 @@ foaf:surname rdf:type owl:AnnotationProperty .
 
 
 #################################################################
+#    Object Properties
+#################################################################
+
+###  https://purl.org/wodt/shadowingLatency
+:shadowingLatency rdf:type owl:ObjectProperty ,
+                           owl:FunctionalProperty ;
+                  rdfs:range time:Duration ;
+                  rdfs:comment "This property represents the shadowing latency of the Digital Twin"@en ;
+                  rdfs:isDefinedBy "https://purl.org/wodt/" ;
+                  rdfs:label "Shadowing latency"@en .
+
+
+#################################################################
 #    Data properties
 #################################################################
 
@@ -102,7 +115,7 @@ foaf:Person rdf:type owl:Class .
 :unitMillisecond rdf:type owl:NamedIndividual ,
                           time:TemporalUnit ;
                  rdfs:comment "The TemporalUnit instance that represents milliseconds."@en ;
-                 rdfs:isDefinedBy "http://purl.org/wodt/" ;
+                 rdfs:isDefinedBy "https://purl.org/wodt/" ;
                  rdfs:label "milliseconds unit of measurement"@en .
 
 
