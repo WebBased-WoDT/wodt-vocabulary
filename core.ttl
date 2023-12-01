@@ -105,12 +105,29 @@ foaf:surname rdf:type owl:AnnotationProperty .
 #    Data properties
 #################################################################
 
+###  https://purl.org/wodt/actionId
+:actionId rdf:type owl:DatatypeProperty ;
+          rdfs:range xsd:string ;
+          rdfs:comment "This property allows to link an Action affordance to its Action identifier."@en ;
+          rdfs:isDefinedBy "https://purl.org/wodt/" ;
+          rdfs:label "Action Id"@en .
+
+
 ###  https://purl.org/wodt/augmentedInteraction
 :augmentedInteraction rdf:type owl:DatatypeProperty ;
                       rdfs:range xsd:boolean ;
                       rdfs:comment "This property state if the interaction is an augmented one or not. If not it means that it is mirrored from the associated Physical Asset."@en ;
                       rdfs:isDefinedBy "https://purl.org/wodt/" ;
                       rdfs:label "Augmented Interaction"@en .
+
+
+###  https://purl.org/wodt/availableActionId
+:availableActionId rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :WoDTDigitalTwin ;
+                   rdfs:range xsd:string ;
+                   rdfs:comment "This property allows to describe the Action that are currently available on a WoDT Digital Twin."@en ;
+                   rdfs:isDefinedBy "https://purl.org/wodt/" ;
+                   rdfs:label "Available Action Id"@en .
 
 
 ###  https://purl.org/wodt/deploymentCountry
