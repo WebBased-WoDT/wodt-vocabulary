@@ -119,6 +119,20 @@ time:TemporalUnit rdf:type owl:Class .
 foaf:Person rdf:type owl:Class .
 
 
+###  https://purl.org/wodt/WoDTDigitalTwinsPlatform
+:WoDTDigitalTwinsPlatform rdf:type owl:Class ;
+                          rdfs:subClassOf :WoDTEntity ;
+                          rdfs:comment "A WoDT Digital Twins Platform is a software entity that manages the creation of the WoDT Digital Twins Platform Knowledge Graph by merging the Digital Twins Knowledge Graphs obtained from the registered WoDT Digital Twins. Based on the WoDT Digital Twins Platform Knowledge Graph the WoDT Digital Twins Platform offers services at the application level and acts as a service-layer to enable applications on top of it."@en ;
+                          rdfs:isDefinedBy "https://purl.org/wodt/" ;
+                          rdfs:label "WoDT Digital Twins Platform"@en .
+
+
+###  https://purl.org/wodt/WoDTEntity
+:WoDTEntity rdf:type owl:Class ;
+            rdfs:comment "This class includes all the classes defined under the WoDT vocabulary"@en ;
+            rdfs:isDefinedBy "https://purl.org/wodt/" .
+
+
 #################################################################
 #    Individuals
 #################################################################
