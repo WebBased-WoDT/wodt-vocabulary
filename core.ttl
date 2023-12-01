@@ -97,6 +97,14 @@ foaf:surname rdf:type owl:AnnotationProperty .
 #    Data properties
 #################################################################
 
+###  https://purl.org/wodt/augmentedInteraction
+:augmentedInteraction rdf:type owl:DatatypeProperty ;
+                      rdfs:range xsd:boolean ;
+                      rdfs:comment "This property state if the interaction is an augmented one or not. If not it means that it is mirrored from the associated Physical Asset."@en ;
+                      rdfs:isDefinedBy "https://purl.org/wodt/" ;
+                      rdfs:label "Augmented Interaction"@en .
+
+
 ###  https://purl.org/wodt/deploymentCountry
 :deploymentCountry rdf:type owl:DatatypeProperty ;
                    rdfs:domain :WoDTDigitalTwin ;
