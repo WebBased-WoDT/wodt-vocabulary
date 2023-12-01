@@ -119,6 +119,17 @@ time:TemporalUnit rdf:type owl:Class .
 foaf:Person rdf:type owl:Class .
 
 
+###  https://purl.org/wodt/WoDTDigitalTwin
+:WoDTDigitalTwin rdf:type owl:Class ;
+                 rdfs:subClassOf :WoDTEntity ;
+                 rdfs:comment """A Digital Twin that follows the WoDT Digital Twin Specification.
+Moreover, a \\textit{registered} WoDT Digital Twin is a WoDT Digital Twin that has added itself or has been added to a WoDT Digital Twins Platform.
+
+Digital Twins refer to the ability to clone a Physical Asset (PA) through a software counterpart during its life cycle. The Digital Twin has a model that reflects all the properties, relationships, and characteristics of the physical asset that are important for the analyzed context."""@en ;
+                 rdfs:isDefinedBy "https://purl.org/wodt/" ;
+                 rdfs:label "WoDT Digital Twin"@en .
+
+
 ###  https://purl.org/wodt/WoDTDigitalTwinsPlatform
 :WoDTDigitalTwinsPlatform rdf:type owl:Class ;
                           rdfs:subClassOf :WoDTEntity ;
