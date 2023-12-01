@@ -66,6 +66,14 @@ foaf:surname rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
+###  https://purl.org/wodt/domainPredicate
+:domainPredicate rdf:type owl:ObjectProperty ;
+                 rdfs:range rdf:Property ;
+                 rdfs:comment "This property allows to associate an element of the meta-model of the Digital Twin Descriptor to the domain."@en ;
+                 rdfs:isDefinedBy "https://purl.org/wodt/" ;
+                 rdfs:label "Domain predicate"@en .
+
+
 ###  https://purl.org/wodt/hasDigitalTwin
 :hasDigitalTwin rdf:type owl:ObjectProperty ;
                 owl:inverseOf :registeredToPlatform ;
@@ -135,6 +143,10 @@ foaf:surname rdf:type owl:AnnotationProperty .
 #################################################################
 #    Classes
 #################################################################
+
+###  http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+rdf:Property rdf:type owl:Class .
+
 
 ###  http://www.w3.org/2006/time#Duration
 time:Duration rdf:type owl:Class .
